@@ -2,11 +2,15 @@ import React from 'react';
 
 import Header from './header';
 import Footer from './footer';
+import Banner from './banner'
+import layoutStyle from './layout.module.scss'
 
 export default ({children}) => (
-  <div style={{ margin: `3rem auto`, maxWidth: 900 }}>
-    <Header />
-    <div style={{ marginTop: `4rem`}}>{children}</div>
+  <div className={layoutStyle.container}>
+    <div className={layoutStyle.content}>
+      <Header />
+      {children}
+    </div>
     <Footer />
   </div>
 )

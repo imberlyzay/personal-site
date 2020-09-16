@@ -1,0 +1,22 @@
+
+.header {
+  padding: 1rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: inline;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.navContainer {
+  list-style: none;
+  float: right;
+}
+
+.link {
+  display: inline-block;
+  margin-right: 1rem;
+}

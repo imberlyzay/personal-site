@@ -1,25 +1,25 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import headerStyle from './header.module.scss'
+
 const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
+  <li className={headerStyle.link}>
+    <Link to={props.to} className={headerStyle.link}>{props.children}</Link>
   </li>
 )
 
 const Header = () => {
   return (
-    <header style={{ marginBottom: `1.5rem` }}>
-      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-          <h3 style={{ display: `inline` }}>Kimberly Zawacki</h3>
-      </Link>
-      <ul>
-        <div style={{ listStyle: `none`, float: `right`}}>
-          <ListLink to='projects'>Projects</ListLink>
-          <ListLink to='/about'>About</ListLink>
-          <ListLink to ='/contact'>Contact</ListLink>
-        </div>
-      </ul>
+    <header className={headerStyle.header}>
+      <ListLink to="/">
+          <div className={headerStyle.title}>Kimberly Zawacki</div>
+      </ListLink>
+      <div className={headerStyle.navContainer}>
+        <ListLink to='/about'>About</ListLink>
+        <ListLink to='projects'>Projects</ListLink>
+        <ListLink to ='/contact'>Contact</ListLink>
+      </div>
     </header>
   )
 }

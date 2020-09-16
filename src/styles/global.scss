@@ -1,0 +1,35 @@
+
+// Colors
+$indigo: #000272;
+
+@keyframes hover-anim {
+  0% {text-shadow: -.125em .125em 0em #000022;}
+  33% {text-shadow: -.125em .125em 0em #000022, -0.25em 0.25em 0em #E28413}
+  66% {text-shadow: -.125em .125em 0em #000022, -0.25em 0.25em 0em #E28413, -0.375em 0.375em 0em #C42847}
+  100% {text-shadow: -.125em .125em 0em #000022, -0.25em 0.25em 0em #E28413, -0.375em 0.375em 0em #C42847, -0.5em 0.5em 0em#23D8B4}
+}
+
+html {
+  background-color: #000022;
+  // color: #FBF5F3;
+  color: #9a9cb3;
+}
+
+a {
+  text-decoration: none;
+  // color: #FBF5F3;
+  color: #9a9cb3;
+  animation-play-state: paused;
+  letter-spacing: 0.05rem;
+}
+
+a:hover {
+  animation: hover-anim 0.15s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+img {
+  max-width: 90%;
+  max-height: 90%;
+}
